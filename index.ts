@@ -1,1 +1,1 @@
-console.log("Hello via Bun!");
+console.log("Hey from Tailor 🤖");
