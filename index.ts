@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import { openPullRequests } from './src/github/pull-requests'
+import { openPullRequests } from './src/github'
 
 const response = await openPullRequests()
 
