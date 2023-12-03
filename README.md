@@ -32,3 +32,8 @@ I am currently working to port over the work I've already completed in my initia
   * Implement something similar to ```.gitignore``` to improve performace.
 3. Retrieval Augmented Generation
   * Implement RAG (with Pinecone?) to provide Tailor with additional context from the codebase it is installed on.
+
+
+## Enterprise
+
+I am working on a more robust team solution as well. If you are interested in discussing possible solutions for specific use cases, please email me at ```austin@fgai.dev```.
