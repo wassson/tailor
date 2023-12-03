@@ -22,7 +22,7 @@ With GitHub's recent release of their own code review tools, I believe it makes 
 
 We use APIs like OpenAI's because it's nearly impossible to host Large Language Models without serious funding and complex tooling, but tools like ```Ollama``` and ```Langchain``` make this possible on local machines with a few gigs (2GB-70GB depending on the model lol) of extra space. Continuing with the web app paradigm would mean running at least two servers (Tailor & Ollama) on top of any other servers required for your own development. By pivoting away from a web app (ultimately losing the UI) and instead focusing on an installable package with command line tools, we reduce the complexity needed to run the app by a significant amount. 
 
-### The Goal & Roadmap
+## Roadmap
 
 I am currently working to port over the work I've already completed in my initial project, but for now:
 
