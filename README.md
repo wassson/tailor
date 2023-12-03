@@ -2,10 +2,13 @@
 
 Tailor is an open-source AI code reviewer for GitHub pull requests built on Typescript & Ollama.
 
-Install with 
+### Install
 ```
 $ bun -i tailorai
 ```
+
+### Ollama
+[Installation directions](https://github.com/jmorganca/ollama)
 
 ## History 
 
