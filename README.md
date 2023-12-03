@@ -25,8 +25,8 @@ I am currently working to port over the work I've already completed in my initia
 
 1. CLI 
   * Install ```tailorai``` on any project with access to JS tooling.
-  * Trigger a review by executing ```tailorai [repo name] [pull request number]``` (workshopping this).
-  * Get a list of open PRs by executing ```tailorai -l [repo name]``` to reduce the cumbersome nature of searching for PR numbers.
+  * Trigger a review by executing ```tailorai -r [pull request number]``` (workshopping this).
+  * Get a list of open PRs by executing ```tailorai -l``` to reduce the cumbersome nature of searching for PR numbers.
 2. Customization
   * Allow users to choose what model (including custom models) reviews their code.
   * Implement something similar to ```.gitignore``` to improve performace.
