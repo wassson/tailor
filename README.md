@@ -13,7 +13,7 @@ $ bun -i tailorai
 
 For several months I've experimented with building a full-fledged web app in different ecosystems (NextJS & Rails). I had achieved my goal of building a code review platform that could: (1) review pull request diffs, or even allow devs to push straight to ```main``` and identify issues before deploys, (2) provide a simple UI with a fine-grain toolset for reviewing even the smallest of diff chunks, and (3) remain flexible enough to support any GitHub workflow. The real challenge remained in keeping the use of OpenAI's API cost-effective, and is a challenge I found few solutions for as PR diffs can be quite large.
 
-With GitHub's recent release of their own code review tools, I believe it makes more sense to pivot and build something that doesn't need to compete! The ecosystem of free, open-source AI tools has grown tremendously in 2023, and I'm hoping Tailor will join the current cadre as an effective tool that empowers developers to build well and build quickly. 
+With GitHub's recent release of their own code review tools, I believe it makes more sense to pivot and build something that doesn't need to compete! The ecosystem of free, open-source AI tools has grown tremendously in 2023, and I'm hoping Tailor will join the current cadre as an effective tool that empowers developers to build well and build quickly - for free. 
 
 ### Pivoting with Ollama
 
