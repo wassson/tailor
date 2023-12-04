@@ -4,7 +4,7 @@ Tailor is an open-source AI code reviewer for GitHub pull requests built on Type
 
 ### Install
 ```
-$ npm -i tailorai
+npm -i tailorai
 ```
 
 ### Ollama
