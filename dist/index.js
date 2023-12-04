@@ -5,7 +5,7 @@ import { Command } from "commander";
 // CLI
 const program = new Command();
 program
-    .version("1.0.0-alpha.1")
+    .version("1.0.0")
     .description("An AI code reviewer for GitHub pull requests")
     .option("-l, --ls", "List open pull requests")
     .option("-r <value>, --review <value>", "Review pull request")
