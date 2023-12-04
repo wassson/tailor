@@ -10,6 +10,28 @@ $ bun -i tailorai
 ### Ollama
 [Installation directions](https://github.com/jmorganca/ollama)
 
+
+## Roadmap
+
+I am currently working to port over the work I've already completed in my initial project (read below), but for now:
+
+1. CLI 
+  * ✅ ```tailorai``` npm package.
+  * ✅ Generate CLI commands with ```commander```.
+  * ✅ Get a list of open PRs by executing ```tailorai -l``` to reduce the cumbersome nature of searching for PR numbers. Response is a list with the format: ```branch-name #pr-number - PR Title```.
+  * Trigger a review by executing ```tailorai -r [pull request number]```.
+  * Add PR description with ```tailorai -d [pull request number]```.
+2. Customization
+  * Allow users to choose what model (including custom models) reviews their code.
+  * Implement something similar to ```.gitignore``` ignore code that should never be reviewed.
+3. Retrieval Augmented Generation
+  * Implement RAG (with Pinecone?) to provide Tailor with additional context from the codebase it is installed on.
+
+
+## Enterprise
+
+I am working on a more robust team solution as well. If you are interested in discussing possible solutions for specific use cases, please email me at ```austin@fgai.dev```.
+
 ## History 
 
 ### Rails/NextJS & OpenAI
@@ -21,23 +43,3 @@ With GitHub's recent release of their own code review tools, I believe it makes 
 ### Pivoting with Ollama
 
 We use APIs like OpenAI's because it's nearly impossible to host Large Language Models without serious funding and complex tooling, but tools like ```Ollama``` and ```Langchain``` make this possible on local machines with a few gigs (2GB-70GB depending on the model lol) of extra space. Continuing with the web app paradigm would mean running at least two servers (Tailor & Ollama) on top of any other servers required for your own development. By pivoting away from a web app (ultimately losing the UI) and instead focusing on an installable package with command line tools, we reduce the complexity needed to run the app by a significant amount. 
-
-## Roadmap
-
-I am currently working to port over the work I've already completed in my initial project, but for now:
-
-1. CLI 
-  * Install ```tailorai``` on any project with access to JS tooling.
-  * Trigger a review by executing ```tailorai -r [pull request number]```.
-  * Add PR description with ```tailorai -d [pull request number]```.
-  * Get a list of open PRs by executing ```tailorai -l``` to reduce the cumbersome nature of searching for PR numbers. Response is a list with the format: ```branch-name #pr-number - PR Title```.
-2. Customization
-  * Allow users to choose what model (including custom models) reviews their code.
-  * Implement something similar to ```.gitignore``` ignore code that should never be reviewed.
-3. Retrieval Augmented Generation
-  * Implement RAG (with Pinecone?) to provide Tailor with additional context from the codebase it is installed on.
-
-
-## Enterprise
-
-I am working on a more robust team solution as well. If you are interested in discussing possible solutions for specific use cases, please email me at ```austin@fgai.dev```.
