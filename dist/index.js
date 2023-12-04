@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 import 'dotenv/config';
-import { openPullRequests } from './github';
-const { Command } = require("commander"); // add this line
+import { Octokit } from "@octokit/core";
+import { Command } from "commander";
+// CLI
 const program = new Command();
 program
     .version("1.0.0-alpha.1")
@@ -11,17 +12,39 @@ program
     .option("-d <value>, --describe <value>", "Describe pull request")
     .parse(process.argv);
 const options = program.opts();
-if (options.ls) {
-    const response = await openPullRequests();
-    // Example response for command: tailorai -l
-    response.data.forEach((repo) => {
-        console.log(`${repo.head.ref} #${repo.number} - ${repo.title}`);
+// GitHub
+const octokit = new Octokit({ auth: process.env.GITHUB_PAT });
+const openPullRequests = async () => {
+    const owner = process.env.GITHUB_OWNER || '';
+    const repo = process.env.GITHUB_REPOSITORY || '';
+    const author = process.env.GITHUB_LOGIN || '';
+    const openPulls = await octokit.request('GET /repos/{owner}/{repo}/pulls?author={author}', {
+        owner: owner,
+        repo: repo,
+        author: author,
+        headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
+        }
     });
-}
-if (options.review || options.r) {
-    console.log("review");
-}
-if (options.describe || options.d) {
-    console.log("describe");
-}
+    return openPulls;
+};
+const listPullRequestSummaries = (pullRequests) => {
+    pullRequests.data.forEach((pullRequest) => {
+        console.log(`${pullRequest.head.ref} #${pullRequest.number} - ${pullRequest.title}`);
+    });
+};
+// Execution
+const main = async () => {
+    if (options.ls || options.l) {
+        const response = await openPullRequests();
+        listPullRequestSummaries(response);
+    }
+    if (options.review || options.r) {
+        console.log("review");
+    }
+    if (options.describe || options.d) {
+        console.log("describe");
+    }
+};
+main();
 //# sourceMappingURL=index.js.map
