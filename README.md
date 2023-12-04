@@ -1,6 +1,6 @@
 # Tailor
 
-Tailor is an open-source AI code reviewer for GitHub pull requests built on Typescript & Ollama.
+Tailor is an open-source AI code reviewer for GitHub pull requests built on Typescript & Ollama. Push pull request reviews and descriptions from the command line. 
 
 ### Install
 To test locally, clone the repo and run:
@@ -23,6 +23,22 @@ GITHUB_REPOSITORY=
 GITHUB_PAT=
 ```
 
+### List open PRs scoped to the user set in .env
+```
+tailor -l
+```
+The above command lists all open PRs created by the user set in the `GITHUB_LOGIN` environment variable with a format of: `#pr-number branch-name - PR Title`
+
+### In-progress commands
+Create and push a PR review
+```
+tailor -r <pr-number>
+```
+Create and push a PR description
+```
+tailor -d <pr-number>
+```
+
 ### Ollama
 [Installation directions](https://github.com/jmorganca/ollama)
 
@@ -34,7 +50,7 @@ I am currently working to port over the work I've already completed in my initia
 1. CLI 
   * ✅ ```tailorai``` npm package.
   * ✅ Generate CLI commands with ```commander```.
-  * ✅ Get a list of open PRs by executing ```tailorai -l``` to reduce the cumbersome nature of searching for PR numbers. Response is a list with the format: ```branch-name #pr-number - PR Title```.
+  * ✅ Get a list of open PRs by executing ```tailorai -l``` to reduce the cumbersome nature of searching for PR numbers. Response is a list with the format: ```#pr-number branch-name - PR Title```.
   * Trigger a review by executing ```tailorai -r [pull request number]```.
   * Add PR description with ```tailorai -d [pull request number]```.
 2. Diff parser & GitHub API

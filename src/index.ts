@@ -46,7 +46,7 @@ const openPullRequests = async () => {
 
 const listPullRequestSummaries = (pullRequests: { data: PullRequestSummary[]; }) => {
   pullRequests.data.forEach((pullRequest: PullRequestSummary) => {
-    console.log(`${pullRequest.head.ref} #${pullRequest.number} - ${pullRequest.title}`)
+    console.log(`#${pullRequest.number} ${pullRequest.head.ref} - ${pullRequest.title}`)
   })
 }
 
@@ -65,7 +65,7 @@ const main = async () => {
   if (options.review || options.r) {
     console.log("review")
   }
-  
+
   if (options.describe || options.d) {
     console.log("describe")
   }

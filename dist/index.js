@@ -30,7 +30,7 @@ const openPullRequests = async () => {
 };
 const listPullRequestSummaries = (pullRequests) => {
     pullRequests.data.forEach((pullRequest) => {
-        console.log(`${pullRequest.head.ref} #${pullRequest.number} - ${pullRequest.title}`);
+        console.log(`#${pullRequest.number} ${pullRequest.head.ref} - ${pullRequest.title}`);
     });
 };
 // Execution
