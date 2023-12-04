@@ -7,6 +7,10 @@ To test locally, clone the repo and run:
 ```
 npm install -g .
 ```
+Then:
+```
+cp .env.example .env
+```
 You will need to set the following env variables:
 ```
 # GitHub username
