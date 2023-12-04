@@ -1,6 +1,6 @@
 {
-  "name": "tailorai",
-  "version": "1.0.1",
+  "name": "tailor-ai",
+  "version": "1.0.0",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "bin": {
