@@ -37,7 +37,12 @@ const listPullRequestSummaries = (pullRequests) => {
 const main = async () => {
     if (options.ls || options.l) {
         const response = await openPullRequests();
-        listPullRequestSummaries(response);
+        if (response.status == 200) {
+            listPullRequestSummaries(response);
+        }
+        else {
+            console.log({ status: response.status, message: response.data });
+        }
     }
     if (options.review || options.r) {
         console.log("review");
