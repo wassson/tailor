@@ -37,10 +37,12 @@ I am currently working to port over the work I've already completed in my initia
   * ✅ Get a list of open PRs by executing ```tailorai -l``` to reduce the cumbersome nature of searching for PR numbers. Response is a list with the format: ```branch-name #pr-number - PR Title```.
   * Trigger a review by executing ```tailorai -r [pull request number]```.
   * Add PR description with ```tailorai -d [pull request number]```.
-2. Customization
+2. Diff parser
+  * currently porting over a custom diff parser that will interact with the Ollama models.
+3. Customization
   * Allow users to choose what model (including custom models) reviews their code.
   * Implement something similar to ```.gitignore``` ignore code that should never be reviewed.
-3. Retrieval Augmented Generation
+4. Retrieval Augmented Generation
   * Implement RAG (with Pinecone?) to provide Tailor with additional context from the codebase it is installed on.
 
 ## History 
