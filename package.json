@@ -1,7 +1,15 @@
 {
   "name": "tailorai",
   "version": "1.0.0-alpha.1",
-  "module": "index.ts",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "tailorai": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "bunx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "type": "module",
   "devDependencies": {
     "bun-types": "latest"
@@ -11,7 +19,10 @@
   },
   "dependencies": {
     "@octokit/core": "^5.0.2",
+    "@types/node": "^20.10.3",
+    "commander": "^11.1.0",
     "dotenv": "^16.3.1",
-    "semver": "^7.5.4"
+    "semver": "^7.5.4",
+    "typescript": "^5.3.2"
   }
 }
