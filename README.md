@@ -23,11 +23,11 @@ GITHUB_REPOSITORY=
 GITHUB_PAT=
 ```
 
-### List open PRs scoped to the user set in .env
+### Commands
+The below command lists all open PRs created by the user set in the `GITHUB_LOGIN` environment variable with a format of: `#pr-number branch-name - PR Title`
 ```
 tailor -l
 ```
-The above command lists all open PRs created by the user set in the `GITHUB_LOGIN` environment variable with a format of: `#pr-number branch-name - PR Title`
 
 ### In-progress commands
 Create and push a PR review
