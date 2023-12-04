@@ -27,6 +27,12 @@ GITHUB_PAT=
 The below command lists all open PRs created by the user set in the `GITHUB_LOGIN` environment variable with a format of: `#pr-number branch-name - PR Title`
 ```
 tailor -l
+
+--------------------
+# example response
+
+#8 feature-slack-auth - Integrate Slack w/ Oauth 2.0
+#9 fix-tooltip-wrapper - Fix non-fading tooltip bug
 ```
 
 ### In-progress commands
