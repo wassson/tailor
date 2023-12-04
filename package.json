@@ -1,13 +1,13 @@
 {
   "name": "tailorai",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.1",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "bin": {
     "tailorai": "./dist/index.js"
   },
   "scripts": {
-    "build": "bunx tsc",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",

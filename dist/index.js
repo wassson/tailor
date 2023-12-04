@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 import 'dotenv/config';
 import { openPullRequests } from './github';
 const { Command } = require("commander"); // add this line
