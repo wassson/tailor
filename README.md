@@ -7,6 +7,17 @@ To test locally, clone the repo and run:
 ```
 npm install -g .
 ```
+You will need to set the following env variables:
+```
+# GitHub username
+GITHUB_LOGIN=
+# Username if working on a repo you own, otherwise repo owner
+GITHUB_OWNER=
+# Repository owned by the owner set above
+GITHUB_REPOSITORY=
+# Personal Access Token
+GITHUB_PAT=
+```
 
 ### Ollama
 [Installation directions](https://github.com/jmorganca/ollama)
