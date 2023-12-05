@@ -24,6 +24,7 @@ const pullRequestDiff = async () => {
             'X-GitHub-Api-Version': '2022-11-28'
         }
     });
+    // TODO: if PR is not 'Open' then return an error
     return response;
 };
 // Execution

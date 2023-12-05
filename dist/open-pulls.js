@@ -3,12 +3,11 @@ import 'dotenv/config';
 import { Octokit } from "@octokit/core";
 import { Command } from "commander";
 // CLI
-const program = new Command();
-program
+const openPulls = new Command();
+openPulls
     .version("0.0.2")
     .description("List all open pull requests for the current user.")
     .parse(process.argv);
-const options = program.opts();
 // GitHub
 const octokit = new Octokit({ auth: process.env.GITHUB_PAT });
 const openPullRequests = async () => {
