@@ -5,7 +5,7 @@ import { Command } from "commander";
 // CLI
 const openPulls = new Command();
 openPulls
-    .version("0.0.2")
+    .version("0.0.3")
     .description("List all open pull requests for the current user.")
     .parse(process.argv);
 // GitHub
