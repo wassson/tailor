@@ -72,7 +72,7 @@ I am currently working to port over the work I've already completed in my initia
     - Should the describe command response be editable before pushing to GH?
 2. **Diff parser & GitHub API**
   * Currently porting over a custom diff parser that will interact with the Ollama models.
-  * Diff API.
+  * ✅ Basic diff API.
 3. **Customization**
   * Allow users to choose what model (including custom models) reviews their code.
   * Implement something similar to `.gitignore` ignore code that should never be reviewed.
