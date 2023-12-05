@@ -25,7 +25,7 @@ GITHUB_PAT=
 
 ### Commands
 1. Open pull requests
-The below command lists all open PRs created by the user set in the `GITHUB_LOGIN` environment variable with a format of: `#pr-number branch-name - PR Title`
+  - The below command lists all open PRs created by the user set in the `GITHUB_LOGIN` environment variable with a format of: `#pr-number branch-name - PR Title`
 ```
 open-pulls
 
@@ -37,7 +37,7 @@ open-pulls
 ```
 
 2. Generate and push a description
-This command *will* push a description to your PR, but it may or may not be accurate at the moment (😂), so be careful. I am experimenting with different models (and prompt engineering) in order to provide a good suggestion for the model most likely to get this command right. 
+  - This command *will* push a description to your PR, but it may or may not be accurate at the moment (😂), so be careful. I am experimenting with different models (and prompt engineering) in order to provide a good suggestion for the model most likely to get this command right. 
 ```
 describe <pr-number>
 ```
