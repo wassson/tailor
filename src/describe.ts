@@ -8,7 +8,7 @@ import { Command } from "commander"
 const describe = new Command();
 
 describe
-  .version("0.0.2")
+  .version("0.0.3")
   .description("Analyze a pull request and push a summary to the pull request on GitHub.")
   .argument('<value>', 'Pull request number')
   .parse(process.argv);
