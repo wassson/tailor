@@ -1,9 +1,10 @@
 name: "Publish tailor-ai to npm"
 
-on: push
-  branches:
+on:
+  push:
+    branches:
     - main
-  paths: 
+    paths:
     - package.json
 
 jobs:
