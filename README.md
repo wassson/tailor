@@ -35,14 +35,15 @@ open-pulls
 #9 fix-tooltip-wrapper - Fix non-fading tooltip bug
 ```
 
+Create and push a PR description. This command *will* push a description to your PR, but it may or may not be accurate at the moment (😂) so be careful. I am experimenting with different models (and prompt engineering) in order to provide a good suggestion for the model most likely to get this command right. 
+```
+describe <pr-number>
+```
+
 ### In-progress commands
 Create and push a PR review
 ```
 review <pr-number>
-```
-Create and push a PR description
-```
-describe <pr-number>
 ```
 
 ### Ollama
