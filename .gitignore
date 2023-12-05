@@ -6,6 +6,7 @@ node_modules
 
 .env
 
+/dist/
 /dist/**/*.js.map
 /dis/**/*.d.ts.map
 *.map

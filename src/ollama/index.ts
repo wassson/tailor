@@ -19,7 +19,5 @@ export const ollamaPrompt = async (diff: string) => {
   }
 
   const response = chunks.join('')
-  console.log("Pushing description to GitHub...")
-
   return response
 }

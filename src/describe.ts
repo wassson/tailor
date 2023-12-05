@@ -2,7 +2,7 @@
 
 import 'dotenv/config'
 import { Command } from "commander"
-import { pullRequestDiff } from './github/index.js';
+import { pullRequestDiff, pushDescription } from './github/index.js';
 import { ollamaPrompt } from './ollama/index.js';
 
 // CLI
@@ -22,6 +22,13 @@ const main = async () => {
 
   if (response.status == 200) {
     const promptResponse = await ollamaPrompt(response.data)
+
+    console.log("Pushing description to GitHub...")
+    const pushResponse = await pushDescription(pullRequestNumber, promptResponse)
+    if (pushResponse.status == 200) {
+      console.log("Done!")
+      console.log(pushResponse.data)
+    }
   } else { 
     console.log({ status: response.status, message: response.data })
   }
