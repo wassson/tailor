@@ -1,10 +1,11 @@
 {
   "name": "tailor-ai",
   "version": "0.0.2",
-  "module": "dist/index.js",
-  "main": "dist/index.js",
+  "module": "dist/open-pulls.js",
   "bin": {
-    "tailor": "dist/index.js"
+    "describe": "dist/describe.js",
+    "review": "dist/review.js",
+    "open-pulls": "dist/open-pulls.js"
   },
   "scripts": {
     "build": "npx tsc",
