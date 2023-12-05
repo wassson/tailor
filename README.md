@@ -72,7 +72,7 @@ I am currently working to port over the work I've already completed in my initia
   * ✅ GitHub Action for publishing to npm.
   * Test suite.
   * Split roadmap into it's own `.md` file.
-  * Refactor `index.ts`.
+  * ✅ Refactor `index.ts`.
   * Branch protection.
 
 ## History 
