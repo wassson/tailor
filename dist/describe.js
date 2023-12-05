@@ -2,6 +2,7 @@
 import 'dotenv/config';
 import { Command } from "commander";
 import { pullRequestDiff } from './github/index.js';
+import { ollamaPrompt } from './ollama/index.js';
 // CLI
 const describe = new Command();
 describe
@@ -14,7 +15,7 @@ const pullRequestNumber = describe.args[0];
 const main = async () => {
     const response = await pullRequestDiff(pullRequestNumber);
     if (response.status == 200) {
-        console.log(response.data);
+        const promptResponse = await ollamaPrompt(response.data);
     }
     else {
         console.log({ status: response.status, message: response.data });
