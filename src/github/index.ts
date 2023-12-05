@@ -34,3 +34,31 @@ export const pushDescription = async (number: string, description: string) => {
 
   return response
 }
+
+export const pushComment = async (number: string, comment: string) => {
+  const owner = process.env.GITHUB_OWNER || ''
+  const repo = process.env.GITHUB_REPOSITORY || ''
+
+  const response = await octokit.request('POST /repos/{owner}/{repo}/issues/{issue_number}/comments', {
+    owner: owner,
+    repo: repo,
+    issue_number: parseInt(number),
+    body: comment
+  })
+
+  return response
+}
+
+export const pushStatus = async (number: string, status: "pending" | "error" | "failure" | "success") => {
+  const owner = process.env.GITHUB_OWNER || ''
+  const repo = process.env.GITHUB_REPOSITORY || ''
+
+  const response = await octokit.request('POST /repos/{owner}/{repo}/statuses/{sha}', {
+    owner: owner,
+    repo: repo,
+    sha: number,
+    state: status
+  })
+
+  return response
+}
