@@ -60,12 +60,19 @@ I am currently working to port over the work I've already completed in my initia
   * Trigger a review by executing ```tailorai -r [pull request number]```.
   * Add PR description with ```tailorai -d [pull request number]```.
 2. Diff parser & GitHub API
-  * currently porting over a custom diff parser that will interact with the Ollama models.
+  * Currently porting over a custom diff parser that will interact with the Ollama models.
+  * Diff API.
 3. Customization
   * Allow users to choose what model (including custom models) reviews their code.
   * Implement something similar to ```.gitignore``` ignore code that should never be reviewed.
 4. Retrieval Augmented Generation
   * Implement RAG (with Pinecone?) to provide Tailor with additional context from the codebase it is installed on.
+5. Repo quality of life
+  * ✅ GitHub Action for publishing to npm.
+  * Test suite.
+  * Split roadmap into it's own `.md` file.
+  * Refactor `index.ts`.
+  * Branch protection.
 
 ## History 
 
