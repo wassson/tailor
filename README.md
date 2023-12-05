@@ -26,7 +26,7 @@ GITHUB_PAT=
 ### Commands
 The below command lists all open PRs created by the user set in the `GITHUB_LOGIN` environment variable with a format of: `#pr-number branch-name - PR Title`
 ```
-tailor -l
+open-pulls
 
 --------------------
 # example response
@@ -38,11 +38,11 @@ tailor -l
 ### In-progress commands
 Create and push a PR review
 ```
-tailor -r <pr-number>
+review <pr-number>
 ```
 Create and push a PR description
 ```
-tailor -d <pr-number>
+describe <pr-number>
 ```
 
 ### Ollama

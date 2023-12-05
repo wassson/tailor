@@ -16,10 +16,7 @@ const program = new Command();
 
 program
   .version("0.0.2")
-  .description("An AI code reviewer for GitHub pull requests")
-  .option("-l, --ls", "List open pull requests")
-  .option("-r <value>, --review <value>", "Review pull request")
-  .option("-d <value>, --describe <value>", "Describe pull request")
+  .description("List all open pull requests for the current user.")
   .parse(process.argv);
 
 const options = program.opts();
@@ -52,22 +49,11 @@ const listPullRequestSummaries = (pullRequests: { data: PullRequestSummary[]; })
 
 // Execution
 const main = async () => {
-  if (options.ls || options.l) {
-    const response = await openPullRequests()
-    if (response.status == 200) { 
-      listPullRequestSummaries(response) 
-    }
-    else { 
-      console.log({ status: response.status, message: response.data })
-    }
-  }
-
-  if (options.review || options.r) {
-    console.log("review")
-  }
-
-  if (options.describe || options.d) {
-    console.log("describe")
+  const response = await openPullRequests()
+  if (response.status == 200) { 
+    listPullRequestSummaries(response) 
+  } else { 
+    console.log({ status: response.status, message: response.data })
   }
 }
 

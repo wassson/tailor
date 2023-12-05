@@ -5,11 +5,8 @@ import { Command } from "commander";
 // CLI
 const program = new Command();
 program
-    .version("0.0.1")
-    .description("An AI code reviewer for GitHub pull requests")
-    .option("-l, --ls", "List open pull requests")
-    .option("-r <value>, --review <value>", "Review pull request")
-    .option("-d <value>, --describe <value>", "Describe pull request")
+    .version("0.0.2")
+    .description("List all open pull requests for the current user.")
     .parse(process.argv);
 const options = program.opts();
 // GitHub
@@ -35,21 +32,13 @@ const listPullRequestSummaries = (pullRequests) => {
 };
 // Execution
 const main = async () => {
-    if (options.ls || options.l) {
-        const response = await openPullRequests();
-        if (response.status == 200) {
-            listPullRequestSummaries(response);
-        }
-        else {
-            console.log({ status: response.status, message: response.data });
-        }
+    const response = await openPullRequests();
+    if (response.status == 200) {
+        listPullRequestSummaries(response);
     }
-    if (options.review || options.r) {
-        console.log("review");
-    }
-    if (options.describe || options.d) {
-        console.log("describe");
+    else {
+        console.log({ status: response.status, message: response.data });
     }
 };
 main();
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=open-pulls.js.map
