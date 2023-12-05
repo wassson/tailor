@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import { ChatOllama } from 'langchain/chat_models/ollama';
 import { StringOutputParser } from 'langchain/schema/output_parser';
-// import { ChatPromptTemplate } from 'langchain/prompts'
 export const ollamaPrompt = async (diff) => {
     const model = new ChatOllama({
         baseUrl: process.env.OLLAMA_URL,
@@ -15,6 +14,5 @@ export const ollamaPrompt = async (diff) => {
         chunks.push(chunk);
     }
     const response = chunks.join('');
-    console.log(response);
     return response;
 };
