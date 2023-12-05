@@ -1,3 +1,3 @@
 import 'dotenv/config';
-export declare const ollamaPrompt: (prompt: string) => Promise<Response>;
+export declare const ollamaPrompt: (diff: string) => Promise<string>;
 //# sourceMappingURL=index.d.ts.map

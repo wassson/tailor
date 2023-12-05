@@ -22,7 +22,8 @@ const main = async () => {
 
   if (response.status == 200) {
     // console.log(response.data)
-    const response = await ollamaPrompt("Why is the sky blue?")
+    const promptResponse = await ollamaPrompt(response.data)
+    console.log(promptResponse)
   } else { 
     console.log({ status: response.status, message: response.data })
   }
