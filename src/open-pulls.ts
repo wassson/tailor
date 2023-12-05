@@ -15,7 +15,7 @@ type PullRequestSummary = {
 const openPulls = new Command();
 
 openPulls
-  .version("0.0.3")
+  .version("0.0.4")
   .description("List all open pull requests for the current user.")
   .parse(process.argv);
 
