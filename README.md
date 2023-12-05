@@ -67,7 +67,8 @@ I am currently working to port over the work I've already completed in my initia
     - Should this include an option to iterate through diff chunks? Not all chunks need a review.
   * Add PR description with `describe [pull request number]`.
     - ✅ Get diff
-    - Descriptions won't work until the Ollama integration is finished.
+    - ✅ Generate description and push to PR.
+      - Prompt needs to be improved for accuracy.
     - Should the describe command response be editable before pushing to GH?
 2. **Diff parser & GitHub API**
   * Currently porting over a custom diff parser that will interact with the Ollama models.
