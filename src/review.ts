@@ -8,6 +8,7 @@ const program = new Command();
 program
   .version("0.0.2")
   .description("Review the pull request diff and push the review to the pull request on GitHub.")
+  .argument('<value>', 'Pull request number')
   .parse(process.argv);
 
 // Execution
