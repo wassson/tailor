@@ -21,9 +21,7 @@ const main = async () => {
   const response = await pullRequestDiff(pullRequestNumber)
 
   if (response.status == 200) {
-    // console.log(response.data)
     const promptResponse = await ollamaPrompt(response.data)
-    console.log(promptResponse)
   } else { 
     console.log({ status: response.status, message: response.data })
   }
