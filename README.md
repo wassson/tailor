@@ -43,7 +43,8 @@ describe <pr-number>
 ```
 
 ### In-progress commands
-Create and push a PR review
+1. Generate and push a PR review
+  - This command doesn't work quite yet (although, technically, you can still run it). Currently, `tailorai` can pull a PR diff from github, but the diff won't be reviewed. I am experimenting with parsing logic, but as it stands, reviews are performed on chunks rather than the whole document, and context is lost. A better plan is required for this to be effective.
 ```
 review <pr-number>
 ```
