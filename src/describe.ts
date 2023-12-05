@@ -3,6 +3,7 @@
 import 'dotenv/config'
 import { Command } from "commander"
 import { pullRequestDiff } from './github/index.js';
+import { ollamaPrompt } from './ollama/index.js';
 
 // CLI
 const describe = new Command();
@@ -20,7 +21,8 @@ const main = async () => {
   const response = await pullRequestDiff(pullRequestNumber)
 
   if (response.status == 200) {
-    console.log(response.data)
+    // console.log(response.data)
+    const response = await ollamaPrompt("Why is the sky blue?")
   } else { 
     console.log({ status: response.status, message: response.data })
   }
