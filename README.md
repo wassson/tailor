@@ -53,21 +53,21 @@ tailor -d <pr-number>
 
 I am currently working to port over the work I've already completed in my initial project (read below), but for now:
 
-1. CLI 
+1. **CLI** 
   * ✅ ```tailorai``` npm package.
   * ✅ Generate CLI commands with ```commander```.
   * ✅ Get a list of open PRs by executing ```tailorai -l``` to reduce the cumbersome nature of searching for PR numbers. Response is a list with the format: ```#pr-number branch-name - PR Title```.
   * Trigger a review by executing ```tailorai -r [pull request number]```.
   * Add PR description with ```tailorai -d [pull request number]```.
-2. Diff parser & GitHub API
+2. **Diff parser & GitHub API**
   * Currently porting over a custom diff parser that will interact with the Ollama models.
   * Diff API.
-3. Customization
+3. **Customization**
   * Allow users to choose what model (including custom models) reviews their code.
   * Implement something similar to ```.gitignore``` ignore code that should never be reviewed.
-4. Retrieval Augmented Generation
+4. **Retrieval Augmented Generation**
   * Implement RAG (with Pinecone?) to provide Tailor with additional context from the codebase it is installed on.
-5. Repo quality of life
+5. **Repo quality of life**
   * ✅ GitHub Action for publishing to npm.
   * Test suite.
   * Split roadmap into it's own `.md` file.
