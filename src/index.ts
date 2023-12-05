@@ -15,7 +15,7 @@ type PullRequestSummary = {
 const program = new Command();
 
 program
-  .version("0.0.1")
+  .version("0.0.2")
   .description("An AI code reviewer for GitHub pull requests")
   .option("-l, --ls", "List open pull requests")
   .option("-r <value>, --review <value>", "Review pull request")
