@@ -40,4 +40,3 @@ const main = async () => {
     }
 };
 main();
-//# sourceMappingURL=open-pulls.js.map
