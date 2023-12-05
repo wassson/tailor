@@ -1,6 +1,6 @@
 {
-  "name": "@feelgoodai/tailor-ai",
-  "version": "0.0.5",
+  "name": "tailor-ai",
+  "version": "0.0.6",
   "module": "dist/open-pulls.js",
   "bin": {
     "describe": "dist/describe.js",

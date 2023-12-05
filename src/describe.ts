@@ -9,7 +9,7 @@ import { ollamaPrompt } from './ollama/index.js';
 const describe = new Command();
 
 describe
-  .version("0.0.5")
+  .version("0.0.6")
   .description("Analyze a pull request and push a summary to the pull request on GitHub.")
   .argument('<value>', 'Pull request number')
   .parse(process.argv);
