@@ -33,6 +33,9 @@ const main = async () => {
     if (response.status == 200) {
         console.log(response.data);
     }
+    else {
+        console.log({ status: response.status, message: response.data });
+    }
 };
 main();
 //# sourceMappingURL=describe.js.map
