@@ -1,3 +1,5 @@
+.DS_Store
+
 node_modules
 
 .idea/*
@@ -5,3 +7,4 @@ node_modules
 .env
 
 /dist/**/*.js.map
+/dis/**/*.d.ts.map

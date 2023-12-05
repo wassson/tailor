@@ -12,4 +12,3 @@ const main = async () => {
     console.log("Reviewing PR...");
 };
 main();
-//# sourceMappingURL=review.js.map

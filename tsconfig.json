@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
-    "rootDir": "src",
     "outDir": "dist",
     "strict": true,
-    "target": "es2017",
-    "module": "ES2022",
-    "sourceMap": true,
     "esModuleInterop": true,
-    "moduleResolution": "node"
-  }
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "NodeNext"
+  },
+  "include": ["./src/"]
 }
